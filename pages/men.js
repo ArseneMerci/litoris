@@ -28,7 +28,7 @@ export default function Men({datas}){
 }
 
 export const getServerSideProps = async () => {
-    const res = await axios.get("http://localhost:3000/api/products/all");
+    const res = await axios.get("https://litorisdesign.herokuapp.com/api/products/all");
     const {data} = res
     return {
       props: {

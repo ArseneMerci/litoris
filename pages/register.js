@@ -28,7 +28,7 @@ const Register = () => {
     }
     setError("");
     setSubmitting(true);
-    const res = await axios.post("http://localhost:3000/api/user/signup", data)
+    const res = await axios.post("https://litorisdesign.herokuapp.com/api/user/signup", data)
                 .catch((data)=>{
                   if(data.message=='Request failed with status code 409') setError('Email already Exists.');
                   else setError('check your internet connection.')

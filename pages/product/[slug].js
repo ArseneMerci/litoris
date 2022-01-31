@@ -258,7 +258,7 @@ export default function Product({ product }) {
 
 export const getServerSideProps = async ({ params }) => {
   const res = await axios.get(
-    `http://localhost:3000/api/products/${params.slug}`
+    `https://litorisdesign.herokuapp.com/api/products/${params.slug}`
   );
   return {
     props: {

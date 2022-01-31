@@ -29,7 +29,7 @@ export default function Login() {
     }
     setError("");
     setSubmitting(true);
-    const res = await axios.post("http://localhost:3000/api/user/login", data)
+    const res = await axios.post("https://litorisdesign.herokuapp.com/api/user/login", data)
                 .catch((data)=>{
                   if(data.message=='Request failed with status code 404' || data.message=='Request failed with status code 400' ) setError("Email or password doesn't Exist.");
                   else setError('check your internet connection.')
