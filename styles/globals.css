@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  width: 980px;
+  margin: 30px auto;
+}
+
+#spin {
+  color: wheat;
+}
+#spin:after {
+  content: "";
+  animation: spin 8s linear infinite;
+}
+@keyframes spin {
+  0% {
+    content: ": Discount applied at checkout";
+  }
+  50% {
+    content: ": Shop clothes designed for fashion";
+  }
+  90% {
+    content: ": Committed in heart and mind";
+  }
+}
+.cd-headline.rotate-1 .cd-words-wrapper {
+  display: inline-block;
+  perspective: 300px;
+}
+.cd-headline.rotate-1 b {
+  opacity: 0;
+  transform-origin: 50% 100%;
+  transform: rotateX(180deg);
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cd-headline.rotate-1 b.is-visible {
+  position: relative;
+  opacity: 1;
+  transform: rotateX(0deg);
+  animation: cd-rotate-1-in 1.2s;
+}
+
+.cd-headline.rotate-1 b.is-hidden {
+  transform: rotateX(180deg);
+  animation: cd-rotate-1-out 1.2s;
+}
+
+@keyframes cd-rotate-1-in {
+  0% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+  35% {
+    transform: rotateX(120deg);
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes cd-rotate-1-out {
+  0% {
+    transform: rotateX(0deg);
+    opacity: 1;
+  }
+  35% {
+    transform: rotateX(-40deg);
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(180deg);
+    opacity: 0;
+  }
+}
+
+.scroll-box {
+  white-space: nowrap;
+  font-size: 1.1em;
+  overflow: hidden;
+  padding: 20px 0;
+  background-color: whitesmoke;
+}
+.scroll-container {
+  width: fit-content;
+  direction: rtl; /*if you want to scroll left to right set dir to ltr */
+}
+#scroll-element {
+  background-color: rgb(182, 182, 182);
+  padding: 25px;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    margin-right: 0%; /*if you want to scroll left to right set margin-left*/
+  }
+  100% {
+    margin-right: 100%; /*if you want to scroll left to right set margin-left*/
+  }
+}
+
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.each-slide span {
+  font-size: 40px;
+  text-align: center;
+}
+
+.activeLink{
+  padding-bottom: 5px;
+  border-bottom: 5px solid;
+  color: #702459;
+}
