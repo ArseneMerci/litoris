@@ -5,6 +5,9 @@
     "build": "next build",
     "start": "next start -p $PORT"
   },
+  "engines": {
+    "node": "16.13.1"
+  },
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "@reduxjs/toolkit": "^1.7.1",
